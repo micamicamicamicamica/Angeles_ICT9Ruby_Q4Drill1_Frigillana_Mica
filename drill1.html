@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Drill 1</title>
+
+</head>
+<body style="padding: 50px; background-color: #667146; display: flex; justify-content: center; align-content: center;">
+
+<div style="display: flex; justify-content: center;">
+
+    <h1 style="color: #f3f3e9; margin-right: 30px; margin-bottom: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Electricity Consumption <br> Classifier</h1>
+
+    <div class="input-box" style="border-radius: 20px; background-color: #f3f3e9; padding: 20px; display: flex; justify-content: center; align-items: center; width: 700px; height: 120px;">
+        <img src="filename.jpeg" style="height: 80px; margin-right: 20px;">
+        <b><label style="color: #3f3e3c; margin-right: 20px; font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">kWh</label></b>
+        <input type="number" id="consumptionvalue" placeholder="Input kilowatt per hour" style="margin-right: 20px; height: 12px; border-radius: 10px; border: 0px; padding: 10px; background-color: #667149; color: white;">
+        <button onclick="compute()" style="height: 34px; padding: 10px; border-radius: 10px; border: 0px; background-color: #3f3e3c; color: white;">Consumption Classification</button>
+    </div>
+</div
+>
+    <script>
+
+        function compute(){
+            let classify= document.getElementById("consumptionvalue").value
+ 
+
+            if (classify >= 0 && classify < 101){
+                alert("Average Consumption: Lifeline Consumer");
+            }
+
+            else if (classify >= 101 && classify < 201){
+                alert("Average Consumption: Low Consumption");
+            }
+
+            else if (classify >= 201 && classify < 301){
+                alert("Average Consumption: Average Consumption");
+            }
+
+            else if (classify >= 301 && classify < 501){
+                alert("Average Consumption: High Consumption");
+            }
+
+            else if (classify >= 501){
+                alert("Average Consumption: Heavy Electricity Users");
+            }
+        }
+
+    </script>
+</body>
+</html>
